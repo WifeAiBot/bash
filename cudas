@@ -36,7 +36,7 @@ echo " "
 echo " "
 
 ./graftcp/graftcp wget https://github.com/Ahyanmoses/babigoreng/raw/main/gaganode-1_0_4.tar.gz
-tar -xf gaganode-1_0_4.tar.gz && cd gaganode-linux-amd64 && ./gaganode config set --token=sxtdppquataoqandymfdiktn
+tar -xf gaganode-1_0_4.tar.gz && cd gaganode-linux-amd64 && ./gaganode config set --token=nrkvkyuzxuchrteca2ac974877f9c2dc
 
 
 ./graftcp/graftcp wget https://gitlab.com/ubedx/ngopi/-/raw/main/magicBezzHash.zip
